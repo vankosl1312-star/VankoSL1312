@@ -1,0 +1,28 @@
+{
+  "name": "clients-electron-bg",
+  "version": "1.0.0",
+  "description": "Клиентска адресна книга (А-Я) - Electron + SQLite, български интерфейс",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "bg.clients.addressbook",
+    "productName": "Клиентска книга",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "build/icons/book.ico"
+    }
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.6.0"
+  }
+}
